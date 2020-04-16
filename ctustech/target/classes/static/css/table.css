@@ -1,0 +1,90 @@
+
+body {
+    color: #141412;
+    line-height: 1.5;
+    margin: 0;
+    font-size: 14px;
+}
+.container{	max-width: 1280px;}
+.paroduct-list{	margin: 30px 0;}
+a{
+	color: #2e2e2e;
+}
+a:hover{
+	color: #e59285;
+}
+.header{background: rgba(255,255,255,.8);}
+.search-btn{
+	font-size:0;
+	width:40px;
+	height: 37px;
+	background: rgba(0, 0, 0, 1);
+	border-color:#000;
+}
+.search-btn:before {
+	content: "";
+    background: rgba(0, 0, 0, 0) url('../images/search_white.png') no-repeat scroll center center;
+    height: 35px;
+    display: block;
+}
+tr td,tr th{
+    text-transform: capitalize;
+}
+.main-page{
+    margin: 40px 0;
+}
+.table-section,
+ .tablerounededCorner{
+    width:100%;
+  }
+  .tablerounededCorner1 .table td,
+  .tablerounededCorner1 .table th{
+    border:1px solid #ccc;
+  }
+  .table-section .tablerounededCorner table th{
+    background: #fff;
+    text-align: center;
+  }
+  .tablerounededCorner table tr th{
+    background:#baef1b;
+  }
+  .table-bordered td, .table-bordered th {
+    border: 1px solid #baef1b;
+}
+.table-striped tbody tr:nth-of-type(odd) {
+    background-color: #cef5ab;
+}
+.table-comments{
+    margin:0px auto;
+}
+.table-comments{
+    position: relative;
+}
+.table-comments button{
+    vertical-align: text-bottom;
+    position: absolute;
+    top: 50%;
+    right: -20%;
+    transform: translateY(-50%);
+    border-color: Black;
+    background: green;
+}
+.table-comments button:hover{
+    border-color: green;
+    background: green;
+}
+.comments_section{
+    max-width: 820px;
+    margin:0px auto;
+}
+.comments_section ul {
+    background: #f1f1f1;
+    padding: 20px;
+}
+.comments_section ul li {
+    display: block;
+    text-transform: capitalize;
+    padding: 2px 0;
+    border-bottom: 1px solid #ddd;
+    font-weight: 600;
+}

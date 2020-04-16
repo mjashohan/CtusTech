@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+	<title>product list page</title>
+	<meta charset="utf-8"></meta>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+	<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+	<link rel="stylesheet" th:href="@{/css/table.css}">
+	<script th:src="@{/js/jquery.min.js}"></script>
+	<script th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+<body class="">
+<header class="header">
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-12">
+				<nav class="navbar navbar-lightjustify-content-between">
+					<a href="/" class="navbar-brand"><img th:src="@{/images/logo.png}" alt="logo" width="145"></a>
+					<!--<form class="form-inline" th:action="@{/product/search}" method="get">
+						<input class="form-control" type="search" name="q" placeholder="Search" aria-label="Search">
+						<button class="search-btn" type="submit">Search</button>
+					</form> -->
+				</nav>
+			</div>
+		</div>
+	</div>
+</header>
+<div class="main-page">
+	<div class="container">
+		<div class="row">
+			<div class="tablerounededCorner tablerounededCorner1">
+				<table class="table table-bordered ">
+
+					<tr>
+						<td><strong>Txn hash</strong></td>
+						<td><span th:text="${product.hashValue}"></span></td>
+					</tr>
+				</table>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<br/>
+	<div class="container">
+		<div class="row">
+			<div class="tablerounededCorner">
+				<table class="table table-bordered table-striped roundedTable">
+					<tr>
+						<td><strong>Alert number :</strong></td>
+						<td><span th:text="${product.alertNumber}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Category :</strong></td>
+						<td><span th:text="${product.category}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Product :</strong> </td>
+						<td><span th:text="${product.product}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Brand :</strong></td>
+						<td><span th:text="${product.brand}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Name :</strong></td>
+						<td><span th:text="${product.name}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Type/Number of Model :</strong></td>
+						<td><span th:text="${product.numberOfModel}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Barcode :</strong></td>
+						<td><span th:text="${product.barCode}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Batch Number :</strong></td>
+						<td><span th:text="${product.batchNumber}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>year :</strong></td>
+						<td><span th:text="${product.year}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>week :</strong></td>
+						<td><span th:text="${product.week}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Type of alert :</strong></td>
+						<td><span th:text="${product.alertType}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Product user :</strong></td>
+						<td><span th:text="${product.productUser}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Alert submitted by :</strong></td>
+						<td><span th:text="${product.submittedBy}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Batch number / Barcode :</strong></td>
+						<td><span th:text="${product.batchNumberOrBarcode}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>OECD Portal Category :</strong></td>
+						<td><span th:text="${product.portalCategory}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Description :</strong></td>
+						<td><span th:text="${product.description}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Country of origin :</strong></td>
+						<td><span th:text="${product.countryOfOrigin}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Counterfeit :</strong></td>
+						<td><span th:text="${product.counterfeit}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Risk type :</strong></td>
+						<td><span th:text="${product.riskType}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Technical defect :</strong></td>
+						<td><span th:text="${product.technicalDefect}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Risk :</strong></td>
+						<td><span th:text="${product.risk}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Measures adopted by notifying country :</strong></td>
+						<td><span th:text="${product.adoptedMeassure}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Products were found and measures were taken also in :</strong></td>
+						<td><span th:text="${product.foundAndTakenMeassure}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Company recall page :</strong></td>
+						<td><span th:text="${product.companyRecallPage}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>URL of Case :</strong></td>
+						<td><span th:text="${product.urlOfCase}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Company recall code (**) :</strong></td>
+						<td><span th:text="${product.companyRecallCode}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Production dates (**) :</strong></td>
+						<td><span th:text="${product.productionDates}"></span></td>
+					</tr>
+					<tr>
+						<td><strong>Packaging description:</strong></td>
+						<td><span th:text="${product.packagingDescription}"></span></td>
+					</tr>
+
+				</table>
+			</div>
+		</div>
+	</div>
+	<br/>
+	<div class="container">
+		<div class="row">
+			<div class="table-comments">
+				<h3>Leave a Comment</h3>
+				<textarea rows='5' cols="100" placeholder='Comments'></textarea>
+				<button type="Submit" class="btn btn-primary">Submit</button>
+			</div>
+		</div>
+	</div>
+
+</div>
+</body>
+</html>

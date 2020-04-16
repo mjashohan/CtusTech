@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Search Enginee</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+    <link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+    <link rel="stylesheet" th:href="@{/css/search-middle.css}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script th:src="@{/js/jquery.min.js}"></script>
+    <script th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+<body class="search-setting">
+<header class="header">
+    <div class="container">
+        <div class="row">
+
+            <div class="col-sm-12">
+                <nav class="navbar navbar-lightjustify-content-between">
+                    <a class="navbar-brand"><img th:src="@{/images/logo.png}" alt="logo" width="145"></a>
+                </nav>
+            </div>
+        </div>
+    </div>
+</header>
+<div class="main-page">
+    <div class="container search-middle">
+        <div class="row">
+            <div class="cmp-logo"><img th:src="@{/images/img.png}" alt="img" /></div>
+            <div class="col-sm-12">
+                <h1> User Friendly Secure Search</h1>
+            </div>
+            <div class="form-search">
+                <form class="form-inline" th:action="@{/product/search}" method="get">
+                    <input class="form-control" type="search" placeholder="Search" name="q" aria-label="Search">
+                    <button class="search-btn" type="submit">Search</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+</div>
+</body>
+</html>

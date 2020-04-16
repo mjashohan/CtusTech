@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>product list page</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1"></meta>
+<link rel="stylesheet" th:href="@{/css/bootstrap.min.css}">
+<link rel="stylesheet" th:href="@{/css/font-awesome.min.css}">
+<link rel="stylesheet" th:href="@{/css/common-page.css}">
+<script th:src="@{/js/jquery.min.js}"></script>
+<script th:src="@{/js/bootstrap.min.js}"></script>
+
+</head>
+<body class="">
+	<header class="header">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-12">
+					<nav class="navbar navbar-lightjustify-content-between">
+						<a href="/" class="navbar-brand"><img th:src="@{/images/logo.png}"
+							alt="logo" width="145"></a>
+					</nav>
+				</div>
+			</div>
+		</div>
+	</header>
+
+	<div class="paroduct-list">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-9">
+
+					<th:block th:each="product : ${products}">
+						<div class="card">
+							<div class="card-body">
+
+								<h5 class="card-title text-primary">
+									<a th:href="@{/product/item(i=${product.id})}"> <span
+										class="text-primary" th:text="${product.name}"></span>
+									</a>
+								</h5>
+								<p class="card-text">
+									<a th:href="@{/product/item(i=${product.id})}">
+									<span><b>Country of Origin : </b></span><span
+										th:text="${product.countryOfOrigin}"></span></a>
+								</p>
+								<p class="card-text" th:text="${product.description}"></p>
+							</div>
+						</div>
+					</th:block>
+
+
+				</div>
+			</div>
+		</div>
+
+	</div>
+</body>
+</html>
